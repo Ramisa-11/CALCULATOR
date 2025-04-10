@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .btn {
+      @apply text-gray-800 p-3 rounded-md text-lg shadow-md transition-transform duration-200 transform active:scale-95;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-blue-100 transition-colors duration-300">
+
+  <button id="themeToggle" class="absolute top-5 right-5 bg-gray-300 px-4 py-2 rounded-lg shadow-md text-gray-700 hover:bg-gray-400 transition">
+    🌙 Dark Mode
+  </button>
+
+  <div class="bg-white p-6 rounded-lg shadow-lg w-80 border-4 border-blue-200 transition-colors duration-300">
+    <!-- Display -->
+    <div class="mb-4">
+      <input type="text" id="display" class="w-full text-right p-4 text-2xl bg-blue-50 text-gray-700 rounded-md shadow-inner" placeholder="0" disabled>
+    </div>
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-3">
+      <button class="btn bg-red-300 hover:bg-red-400">C</button>
+      <button class="btn bg-yellow-300 hover:bg-yellow-400">/</button>
+      <button class="btn bg-green-300 hover:bg-green-400">*</button>
+      <button class="btn bg-pink-300 hover:bg-pink-400">⌫</button>
+
+      <button class="btn bg-purple-200 hover:bg-purple-300">7</button>
+      <button class="btn bg-purple-200 hover:bg-purple-300">8</button>
+      <button class="btn bg-purple-200 hover:bg-purple-300">9</button>
+      <button class="btn bg-orange-300 hover:bg-orange-400">-</button>
+
+      <button class="btn bg-teal-200 hover:bg-teal-300">4</button>
+      <button class="btn bg-teal-200 hover:bg-teal-300">5</button>
+      <button class="btn bg-teal-200 hover:bg-teal-300">6</button>
+      <button class="btn bg-orange-300 hover:bg-orange-400">+</button>
+
+      <button class="btn bg-blue-200 hover:bg-blue-300">1</button>
+      <button class="btn bg-blue-200 hover:bg-blue-300">2</button>
+      <button class="btn bg-blue-200 hover:bg-blue-300">3</button>
+      <button class="btn row-span-2 bg-indigo-300 hover:bg-indigo-400 text-white text-2xl font-bold">=</button>
+
+      <button class="btn col-span-2 bg-pink-200 hover:bg-pink-300">0</button>
+      <button class="btn bg-pink-200 hover:bg-pink-300">.</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
